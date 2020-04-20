@@ -1,0 +1,72 @@
+:root {
+  --gradient: linear-gradient(25deg, #aaa, #066, #815337, #2D325A);
+  --font-color: linear-gradient(35deg, red, blue, #FF7F91, brown, #055, green, orange);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: basic-sans, sans-serif;
+  background-color: grey;
+  background-image: var(--gradient);
+  background-size: 1000%;
+  animation: body-color 100s infinite ease;
+}
+
+@keyframes body-color {
+  0% {
+    background-position: left;
+  }
+
+  50% {
+    background-position: right;
+  }
+
+  100% {
+    background-position: left;
+  }
+}
+
+.container {
+  padding: 2.5rem 4rem;
+  border-radius: 10px;
+  display: grid;
+  place-content: center;
+  background: #fff;
+  box-shadow: 0 0 5rem rgba(0, 0, 0, .2);
+}
+
+#name {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #2D325A;
+  text-transform: uppercase;
+  background-image: var(--font-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 300%;
+  animation: name-color 10s infinite;
+  cursor: pointer;
+}
+
+@keyframes name-color {
+  0% {
+    background-position: left;
+  }
+
+  50% {
+    background-position: right;
+  }
+
+  100% {
+    background-position: left;
+  }
+}
